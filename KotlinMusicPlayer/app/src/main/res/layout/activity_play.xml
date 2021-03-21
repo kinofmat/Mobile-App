@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This formatting is really reminiscent of HTML. I feel that makes it easy to use.-->
+<!--LinearLayout will do as it says, and create all objects in a linear layout, unless otherwise created into groupings-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="314dp"
+        android:src="@drawable/imagine_dragons" />
+
+    <SeekBar
+        android:id="@+id/playBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" />
+
+    <!--This second LinearLayout keeps these items together.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/elapsedTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="0:11" />
+
+        <TextView
+            android:id="@+id/remainingTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="240dp"
+            android:text="-1:11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/playBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/play"
+            android:onClick="playClick" />
+
+        <Button
+            android:id="@+id/stopBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/stop"
+            android:onClick="stopClick" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/quiet"
+            android:layout_width="18dp"
+            android:layout_height="26dp"
+            android:background="@drawable/quieter"
+            android:onClick="quietClick" />
+
+        <SeekBar
+            android:id="@+id/volumeBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50" />
+
+        <Button
+            android:id="@+id/loud"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/louder"
+            android:onClick="loudClick" />
+    </LinearLayout>
+</LinearLayout>
